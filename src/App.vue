@@ -1,8 +1,9 @@
 <template>
-  <div class="h-screen w-[1300px] flex m-auto">
+  <div class="flex items-center justify-center">
+  <div class="h-screen xl:w-[1300px] flex m-auto">
   <LeftBar/>
   <Main/>
-
+</div>
   </div>
 </template>
 

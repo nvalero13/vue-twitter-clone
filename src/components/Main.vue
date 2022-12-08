@@ -2,17 +2,20 @@
   <div class="h-screen w-[600px] border-r border-lighter">
     <div class="flex justify-between items-center px-4 py-4">
       <h3 class="text-xl font-bold">Inicio</h3>
+      <button class="flex items-center justify-center rounded-full p-2 h-[32px] w-[32px] hover:bg-lightgrey transition-all">
       <font-awesome-icon icon="fa-solid fa-star" />
+    </button>
     </div>
     <div class="flex items-start px-4 py-1 border-b border-lighter pb-3">
       <img
-        class="w-[48px] h-[48px] rounded-full"
+        class="w-[48px] h-[48px] rounded-full hover:opacity-80 transition-all"
         src="../assets/user.jpg"
         alt="Avatar"
       />
-      <div class="flex-col w-full px-3">
+    
+      <div class="flex-col w-full pl-3">
         <input
-          class="py-3 mb-3 text-xl outline-none"
+          class="py-3 mb-3 text-xl outline-none w-full"
           type="text"
           placeholder="¿Qué está pasando?"
           v-model="text"
@@ -27,11 +30,19 @@
               :icon="icon"
             />
           </div>
-          <button :disabled="isDisabled" class="rounded-full px-4 py-2 text-white font-bold" :class="disabledClass">
+          <button :disabled="isDisabled" class="rounded-full px-4 py-1.5 text-white font-bold" :class="disabledClass">
             Twittear
           </button>
         </div>
       </div>
+    </div>
+    <button class="h-14 w-full flex justify-center items-center border-b border-lighter hover:bg-lightest transition-all">
+      <p class="text-blue">Mostrar 323 tweets</p>
+    </button>
+
+    <!-- TWEET -->
+    <div>
+
     </div>
   </div>
 </template>
@@ -49,7 +60,8 @@ const icons = ref([
 ]);
 
 const text = ref()
-
+const isDisabled = ref(true)
+const disabledClass = ref("bg-lightblue")
 
 function handleInput() {
     if (text.value.length > 0) {
@@ -61,9 +73,7 @@ function handleInput() {
     }
 }
 
-const isDisabled = ref(true)
 
-const disabledClass = ref("bg-lightblue")
 
 
 

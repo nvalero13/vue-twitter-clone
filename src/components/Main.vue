@@ -39,8 +39,10 @@
     <button class="h-14 w-full flex justify-center items-center border-b border-lighter hover:bg-lightest transition-all">
       <p class="text-blue">Mostrar 323 tweets</p>
     </button>
-
-    <!-- TWEET -->
+    <Tweet/>
+    <Tweet/>
+    <Tweet/>
+    <Tweet/>
     <div>
 
     </div>
@@ -48,6 +50,7 @@
 </template>
 
 <script setup>
+import Tweet from "./Tweet.vue";
 import { ref } from "vue";
 
 const icons = ref([

@@ -4,7 +4,7 @@
   >
     <div class="flex flex-col gap-4">
       <button
-        class="h-12 w-12 hover:bg-lightblue text-3xl text-blue rounded-full"
+        class="h-12 w-12 hover:bg-lighterblue text-3xl text-blue rounded-full"
       >
         <font-awesome-icon icon="fa-brands fa-twitter" />
       </button>
@@ -19,7 +19,7 @@
         </button>
       </div>
       <button
-        class="bg-blue text-white p-3 mt-3 rounded-full hover:bg-darkblue"
+        class="bg-blue text-white p-3 mt-3 rounded-full hover:bg-darkblue font-bold"
       >
         Twittear
       </button>

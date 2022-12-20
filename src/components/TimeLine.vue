@@ -9,14 +9,15 @@
 import Tweet from "./Tweet.vue";
 import { ref } from "vue";
 
-const tweets = ref([{
+const tweets = ref([
+{
     user: {
         img: "src/assets/user.jpg",
         name: "NV (Parody)",
         username: "nvalero13"
     },
-    timestamp: "3h ago",
-    content: "Lorem"
+    date: "2022-12-20T08:00:00",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit 🐦. Soluta, ut aliquid maiores omnis adipisci tenetur fuga dolores repellendus molestias! Aspernatur."
 },
 {
     user: {
@@ -24,7 +25,7 @@ const tweets = ref([{
         name: "CE Sabadell",
         username: "cesabadell"
     },
-    timestamp: "5h ago",
+    date: "2022-12-19T18:00:00",
     content: "Gabri a la puta calle gente"
 },
 {
@@ -33,7 +34,7 @@ const tweets = ref([{
         name: "Elon Musk",
         username: "elonmusk"
     },
-    timestamp: "8h ago",
+    date: "2022-12-17T12:00:00",
     content: "Those who want power are the ones who least deserve it"
 }]);
 

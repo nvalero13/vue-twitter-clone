@@ -11,21 +11,25 @@
         <p class="font-semibold">{{ tweet.user.name }}</p>
         <p class="text-grey before:content-['@']">{{ tweet.user.username }}</p>
         <p class="text-grey">·</p>
-        <p class="text-grey">{{ tweet.timestamp}}</p>
+        
+        <Timestamp :date="tweet.date"/>
       </div>
       <button class="text-grey text-xl h-[34px] w-[34px] rounded-full hover:bg-lighter hover:text-blue transition-all">
         <font-awesome-icon icon="fa-solid fa-ellipsis" />
       </button>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit 🐦. Soluta, ut aliquid maiores omnis adipisci tenetur fuga dolores repellendus molestias! Aspernatur.</p>
+    <p>{{ tweet.content  }}</p>
     </div>
   </div>
 
 </template>
 
 <script setup>
+import Timestamp from './Timestamp.vue';
 
-const props = defineProps(["tweet"])
+const props = defineProps(["tweet"]);
+
+
 
 </script>
 

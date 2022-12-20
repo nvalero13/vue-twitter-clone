@@ -1,14 +1,10 @@
 <template>
-  <div class="flex items-start w-full py-2 px-4 hover:bg-lightest border-b border-lighter">
-    <img
-      class="h-[48px] w-[48px] mr-3 rounded-full"
-      :src="tweet.user.img"
-      alt=""
-    />
-    <div class="flex flex-col w-full">
+  <div class="flex items-start w-full py-2 px-4 hover:bg-lightestgrey border-b border-lighter">
+    <UserImg :user="tweet.user"/>
+    <div class="flex flex-col w-full ml-1">
     <div class="flex w-full items-center justify-between">
       <div class="flex gap-1">
-        <p class="font-semibold">{{ tweet.user.name }}</p>
+        <p class="font-bold hover:underline cursor-pointer">{{ tweet.user.name }}</p>
         <p class="text-grey before:content-['@']">{{ tweet.user.username }}</p>
         <p class="text-grey">·</p>
         
@@ -19,16 +15,21 @@
       </button>
     </div>
     <p>{{ tweet.content  }}</p>
+    <img v-if="tweet.img" class="rounded-2xl mt-3 mr-1 max-w-full cursor-pointer border border-lightgrey" :src="tweet.img" alt="Image">
+    <Interactions :stats="tweet.stats"/>
     </div>
+    
+
   </div>
 
 </template>
 
 <script setup>
+import Interactions from './Interactions.vue';
 import Timestamp from './Timestamp.vue';
+import UserImg from './UserImg.vue'
 
 const props = defineProps(["tweet"]);
-
 
 
 </script>

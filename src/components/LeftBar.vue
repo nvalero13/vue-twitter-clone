@@ -1,6 +1,7 @@
 <template>
+  <div class="w-[88px] xl:w-[275px]">
   <div
-    class="h-screen w-[88px] xl:w-[275px] flex flex-col justify-between xl:items-start items-center border-r border-lighter px-2 xl:px-4 py-2"
+    class="fixed h-screen w-[88px] xl:w-[275px] flex flex-col justify-between xl:items-start items-center border-r border-lighter px-2 xl:px-4 py-2"
   >
     <div class="flex flex-col gap-4">
       <button
@@ -49,6 +50,7 @@
       <font-awesome-icon v-if="screenXL" icon="fa-solid fa-ellipsis" />
     </button>
   </div>
+</div>
 </template>
 
 <script setup>

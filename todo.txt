@@ -1,0 +1,8 @@
+TO DO
+
+[X] Tweet buttons
+[ ] Pointer events on hover info
+[ ] Info on hover name
+[ ] Info on hover timestamp
+[ ] Tweet buttons interactions
+

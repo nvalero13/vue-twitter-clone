@@ -1,12 +1,12 @@
 <template>
   <div class="h-screen w-[600px] border-r border-lighter">
-    <div class="flex justify-between items-center px-4 py-4">
+    <div class="flex justify-between items-center px-4 py-4 fixed w-[599px] z-10 bg-white bg-opacity-90 backdrop-blur-sm">
       <h3 class="text-xl font-bold">Inicio</h3>
       <button class="flex items-center justify-center rounded-full p-2 h-[32px] w-[32px] hover:bg-lightgrey transition-all">
       <font-awesome-icon icon="fa-solid fa-star" />
     </button>
     </div>
-    <div class="flex items-start px-4 py-1 border-b border-lighter pb-3">
+    <div class="flex items-start px-4 py-1 border-b border-lighter mt-16 pb-3">
       <img
         class="w-[48px] h-[48px] rounded-full hover:opacity-80 transition-all"
         src="../assets/user.jpg"

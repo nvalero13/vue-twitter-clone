@@ -1,14 +1,16 @@
 <template>
-  <div class="relative group">
+  <div class="relative group" @mouseenter="startTimer" @mouseleave="clearTimer">
     <img
+      
       class="h-[48px] w-[48px] mr-3 rounded-full cursor-pointer hover:opacity-80"
       :src="user.avatar"
       alt=""
     />
+    <Transition>
     <div
+      v-if="show"
       class="bg-white rounded-xl shadow-[0_15px_60px_-15px_rgba(0,0,0,0.3)] w-80 p-3
-      absolute right-1/2 translate-y-2 translate-x-1/2 z-10 pointer-events-none group-hover:pointer-events-auto 
-      opacity-0 group-hover:opacity-100 transition-all delay-700"
+      absolute right-1/2 translate-y-2 translate-x-1/2 z-10"
     >
       <div class="flex justify-between items-start">
         <img
@@ -30,11 +32,46 @@
 
       <p class="">{{ user.desc }}</p>
     </div>
+  </Transition>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 const props = defineProps(["user"]);
+
+
+const show = ref(false)
+const timer = ref(null)
+const timer2 = ref(null)
+
+function startTimer() {
+      clearTimeout(timer2.value)
+
+      timer.value = setTimeout(() => {
+        show.value = true
+      }, 600)
+    }
+
+function clearTimer() {
+      clearTimeout(timer.value)
+
+      timer2.value = setTimeout(() => {
+        show.value = false
+      }, 600)
+      timer.value=null
+     
+    }
 </script>
 
-<style scoped></style>
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>

@@ -6,7 +6,8 @@
       :src="user.avatar"
       alt=""
     />
-    <Transition>
+    <HoverInfo :user="user" :show="show"/>
+    <!-- <Transition>
     <div
       v-if="show"
       class="bg-white rounded-xl shadow-[0_15px_60px_-15px_rgba(0,0,0,0.3)] w-80 p-3
@@ -32,14 +33,15 @@
 
       <p class="">{{ user.desc }}</p>
     </div>
-  </Transition>
+  </Transition> -->
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-const props = defineProps(["user"]);
+import HoverInfo from './HoverInfo.vue'
 
+const props = defineProps(["user"]);
 
 const show = ref(false)
 const timer = ref(null)
@@ -50,7 +52,7 @@ function startTimer() {
 
       timer.value = setTimeout(() => {
         show.value = true
-      }, 600)
+      }, 500)
     }
 
 function clearTimer() {
@@ -58,20 +60,12 @@ function clearTimer() {
 
       timer2.value = setTimeout(() => {
         show.value = false
-      }, 600)
+      }, 400)
       timer.value=null
      
     }
 </script>
 
 <style scoped>
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.3s ease;
-}
 
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
 </style>

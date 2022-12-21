@@ -12,11 +12,11 @@ const tweets = ref([
         avatar: "src/assets/user.jpg",
         name: "NV (Parody)",
         username: "nvalero13",
-        desc: "don't you know the world is built with blood and genocide and exploitatioon",
+        desc: "don't you know the world is built with blood and genocide and exploitatioon 🎶",
         verified: false,
         stats: {
-            following: 213,
-            followers: 1830,
+            following: 98,
+            followers: 15,
         }
     },
     date: "2022-12-20T08:00:00",
@@ -32,11 +32,17 @@ const tweets = ref([
         avatar: "src/assets/user1.jpg",
         name: "CE Sabadell",
         username: "cesabadell",
-        desc: "El millor equip de futbol del món",
+        desc: `
+        Twitter Oficial Centre d'Esports Sabadell FC. Fundació 1903. #SomDelSabadell Futbol Base: 
+@FutBaseCES
+ Memòria Històrica: 
+@CESHistoria
+ Inclusiu: 
+@CESInclusiu`,
         verified: true,
         stats: {
             following: 213,
-            followers: 1830,
+            followers: 3830,
         }
     },
     date: "2022-12-19T18:00:00",
@@ -55,8 +61,8 @@ const tweets = ref([
         desc: "My sons hate me",
         verified: false,
         stats: {
-            following: 213,
-            followers: 1830,
+            following: 8,
+            followers: 210830,
         }
     },
     date: "2022-12-17T12:00:00",

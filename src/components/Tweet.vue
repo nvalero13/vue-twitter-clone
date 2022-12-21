@@ -4,7 +4,10 @@
     <div class="flex flex-col w-full ml-1">
     <div class="flex w-full items-center justify-between">
       <div class="flex gap-1">
+        <div class="relative" @mouseenter="startTimer" @mouseleave="clearTimer">
         <p class="font-bold hover:underline cursor-pointer">{{ tweet.user.name }}</p>
+        <HoverInfo :user="tweet.user" :show="show"/>
+        </div>  
         <p class="text-grey before:content-['@']">{{ tweet.user.username }}</p>
         <p class="text-grey">·</p>
         
@@ -25,13 +28,35 @@
 </template>
 
 <script setup>
+import HoverInfo from './HoverInfo.vue';
 import Interactions from './Interactions.vue';
 import Timestamp from './Timestamp.vue';
 import UserImg from './UserImg.vue'
 
+import { ref } from 'vue';
 const props = defineProps(["tweet"]);
 
+const show = ref(false)
+const timer = ref(null)
+const timer2 = ref(null)
 
+function startTimer() {
+      clearTimeout(timer2.value)
+
+      timer.value = setTimeout(() => {
+        show.value = true
+      }, 500)
+    }
+
+function clearTimer() {
+      clearTimeout(timer.value)
+
+      timer2.value = setTimeout(() => {
+        show.value = false
+      }, 400)
+      timer.value=null
+     
+    }
 </script>
 
 <style></style>

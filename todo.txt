@@ -1,8 +1,9 @@
 TO DO
 
 [X] Tweet buttons
-[ ] Pointer events on hover info
-[ ] Info on hover name
+[X] Pointer events on hover info
+[X] Info on hover name
 [ ] Info on hover timestamp
-[ ] Tweet buttons interactions
+[X] Tweet buttons interactions
+[ ] Format mil followers
 
